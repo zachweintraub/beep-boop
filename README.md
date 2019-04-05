@@ -29,6 +29,8 @@ A website created with HTML, CSS with Bootstrap, and JavaScript with jQuery. The
 2. Open the index.html file in your browser of choice.
 3. Enjoy!
 
+_Note: This site is also hosted at https://zachweintraub.github.io/beep-boop/_
+
 ## Known Bugs
 * No known bugs at this time.
 
