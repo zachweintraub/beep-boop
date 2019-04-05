@@ -1,3 +1,6 @@
+//BIZ LOGIC
+
+//function to generate output
 function beepBoop(input) {
   var num = parseInt(input);
   var outputArr = [];
@@ -19,6 +22,7 @@ function beepBoop(input) {
   return outputArr;
 }
 
+//function to increment the ID of the currently displayed image
 function picSwap(currentPic) {
   var picsArr = ['pic1', 'pic2', 'pic3', 'pic4', 'pic5'];
   var currentIndex = picsArr.indexOf(currentPic);
@@ -27,6 +31,7 @@ function picSwap(currentPic) {
   } else return picsArr[0];
 }
 
+//UI LOGIC
 $(function(){
   var keyUps = 0;
   $('#userInput').keyup(function(){
@@ -45,5 +50,4 @@ $(function(){
       $('#outputList').empty($('#outputList'));
     }
   });
-
 });
