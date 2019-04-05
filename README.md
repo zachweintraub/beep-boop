@@ -8,9 +8,9 @@
 
 A website created with HTML, CSS with Bootstrap, and JavaScript with jQuery. The site takes a number from a user and returns a range of numbers from 0 to the user inputted number with the following exceptions (ordered by priority from least to greatest importance):
 
-* Numbers that contain a 1: all digits are replaced (all digits) with "Beep!"
-* Numbers that contain a 2: all digits are replaced (all digits) with "Boop!"
-* Numbers that contain a 3: all digits are replaced (all digits) with "I'm sorry, Dave. I'm afraid I can't do that."
+* Numbers that contain a 1: all digits are replaced with "Beep!"
+* Numbers that contain a 2: all digits are replaced with "Boop!"
+* Numbers that contain a 3: all digits are replaced with "I'm sorry, Dave. I'm afraid I can't do that."
 
 
 ### Specs

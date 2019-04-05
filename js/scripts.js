@@ -1,6 +1,6 @@
 //BIZ LOGIC
 
-//function to generate output
+//function to generate output from least to greatest
 function beepBoop(input) {
   var num = parseInt(input);
   var outputArr = [];
@@ -34,7 +34,10 @@ function picSwap(currentPic) {
 //UI LOGIC
 $(function(){
   var keyUps = 0;
+  //function to print output on keyup in input
   $('#userInput').keyup(function(){
+    console.log('triggered');
+    //logic to display new photo every five keyups
     keyUps++;
     if(keyUps > 4) {
       var currentPic = $('.show').attr('id');
@@ -42,12 +45,23 @@ $(function(){
       $('#' + picSwap(currentPic)).addClass('show');
       keyUps = 0;
     }
+    //clear any previously printed outputs
     $('#outputList').empty($('#outputList'));
+    //call beepBoop to create array, then run forEach to print
     beepBoop($('#userInput').val()).forEach(function(output){
-      $('#outputList').append('<li>' + output + '</li>');
+      //look at output preference radio to determine output order before printing
+      if($("input:radio:checked").val() < 2) {
+        console.log('hi');
+        $('#outputList').append('<li>' + output + '</li>');
+      } else $('#outputList').prepend('<li>' + output + '</li>');
     });
+    //logic to clear output if input is empty
     if($('#userInput').val() === '') {
       $('#outputList').empty($('#outputList'));
     }
+  });
+  //function to re-order output when new radio button is selected
+  $('input:radio').change(function(){
+    $('#userInput').trigger('keyup');
   });
 });
