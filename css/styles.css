@@ -1,0 +1,13 @@
+body {
+  font-family: monospace;
+}
+
+img {
+  height: 250px;
+  width: 500px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
