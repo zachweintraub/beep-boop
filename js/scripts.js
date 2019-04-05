@@ -1,8 +1,10 @@
 function beepBoop(input) {
   var num = parseInt(input);
   var outputArr = [];
-  if(isNaN(num) || num < 0) {
-    outputArr.push('You call that a number, Dave?')
+  if(isNaN(num) || num < 0 || num > 1000) {
+    if(num > 1000) {
+      outputArr.push('I\'d rather not count that high, Dave.')
+    } else outputArr.push('You call that a number, Dave?')
   } else {
     for(var i = 0; i < num+1; i++) {
       if(i.toString().split('').includes('3')) {
@@ -28,7 +30,6 @@ function picSwap(currentPic) {
 $(function(){
   $('#userInput').keyup(function(){
     var currentPic = $('.show').attr('id');
-    console.log(currentPic);
     $('img').removeClass();
     $('#' + picSwap(currentPic)).addClass('show');
     $('#outputList').empty($('#outputList'));
