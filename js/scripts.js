@@ -18,5 +18,11 @@ function beepBoop(input) {
 }
 
 $(function(){
+  $('#userInput').keyup(function(){
+    $('#outputList').empty($('#outputList'));
+    beepBoop($('#userInput').val()).forEach(function(output){
+      $('#outputList').append('<li>' + output + '</li>');
+    })
+  })
 
 });
