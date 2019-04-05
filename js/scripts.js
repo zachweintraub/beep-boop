@@ -28,10 +28,15 @@ function picSwap(currentPic) {
 }
 
 $(function(){
+  var keyUps = 0;
   $('#userInput').keyup(function(){
-    var currentPic = $('.show').attr('id');
-    $('img').removeClass();
-    $('#' + picSwap(currentPic)).addClass('show');
+    keyUps++;
+    if(keyUps > 4) {
+      var currentPic = $('.show').attr('id');
+      $('img').removeClass();
+      $('#' + picSwap(currentPic)).addClass('show');
+      keyUps = 0;
+    }
     $('#outputList').empty($('#outputList'));
     beepBoop($('#userInput').val()).forEach(function(output){
       $('#outputList').append('<li>' + output + '</li>');
